@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Main program"""
 import cmd
 
 class HBNBCommand(cmd.Cmd):
