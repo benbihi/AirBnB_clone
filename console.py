@@ -18,17 +18,5 @@ class HBNBCommand(cmd.Cmd):
         """Do nothing on empty input line"""
         pass
 
-    def do_help(self, arg):
-        """Help command"""
-        if arg:
-            try:
-                func = getattr(self, 'help_' + arg)
-            except AttributeError:
-                print(f"No help on {arg}")
-                return
-            func()
-        else:
-            super().do_help(arg)
-
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
